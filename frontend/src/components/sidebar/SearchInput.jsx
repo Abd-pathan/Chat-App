@@ -31,11 +31,13 @@ const SearchInput = () => {
     className="input input-bordered rounded-full flex-grow min-w-0 md:min-w-[250px] lg:min-w-[300px]" 
     value={search}
     onChange={(e) => setSearch(e.target.value)}
+    style={{ marginTop: 'env(safe-area-inset-top)' }} // adds padding to avoid overlap on iOS
   />
   <button type="submit" className="btn btn-circle bg-sky-500 text-white flex-shrink-0">
     <IoSearchSharp className="w-6 h-6 outline-none" />
   </button>
 </form>
+
 
 
 	);

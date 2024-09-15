@@ -13,5 +13,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+	padding-top: env(safe-area-inset-top);
 
 }
