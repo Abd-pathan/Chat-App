@@ -1,7 +1,7 @@
 import React from 'react';
 import MessageContainer from "../../components/messages/MessageContainer";
-import Sidebar from "../../components/sidebar/SideBar";
-import BackToTop from "../../components/BackToTop"; // Adjust the import path based on your directory structure
+import Sidebar from "../../components/sidebar/Sidebar";
+import BackToTop from "../../components/BackToTop"; 
 
 const Home = () => {
   return (
