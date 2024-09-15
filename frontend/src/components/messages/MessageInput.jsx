@@ -16,25 +16,26 @@ const MessageInput = () => {
 	};
 
 	return (
-		<form className='px-4  bg-white' onSubmit={handleSubmit}>
-  <div className='w-full flex items-center *:mx-2'>
-  <Laugh />
-  <Plus />
+		<form className="px-4 bg-white" onSubmit={handleSubmit}>
+  <div className="w-full flex items-center space-x-2">
+    <Laugh />
+    <Plus />
     <input
-      type='text'
-      className='border text-sm rounded-lg block w-full p-2.5 bg-white border-gray-600 text-black my-3'
-      placeholder='Send a message'
-			value={message}
-			onChange={(e) => setMessage(e.target.value)}
+      type="text"
+      className="border text-sm rounded-lg block w-full p-2.5 bg-white border-gray-600 text-black my-3"
+      placeholder="Send a message"
+      value={message}
+      onChange={(e) => setMessage(e.target.value)}
     />
-       <button
-          type='submit'
-          className='ml-2 p-2 bg-gray-700 text-white rounded-lg hover:bg-green-600 flex items-center'
-       >
- 			 {loading ? <div className='loading loading-spinner'></div> : <BsSend />}
-        </button>
-        </div>
-        </form>
+    <button
+      type="submit"
+      className="ml-2 p-2 bg-gray-700 text-white rounded-lg hover:bg-green-600 flex items-center"
+    >
+      {loading ? <div className="loading loading-spinner"></div> : <BsSend />}
+    </button>
+  </div>
+</form>
+
 
 	);
 };

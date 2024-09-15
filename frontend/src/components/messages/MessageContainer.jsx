@@ -16,31 +16,29 @@ const MessageContainer = () => {
 	
 	return (
 		   
-		<div className='md:min-w-[950px] flex flex-col' style={{
+		<div className="flex-1 flex flex-col md:min-w-[300px] lg:min-w-[950px] bg-cover" style={{
 			backgroundImage: `url('https://cdn.wallpapersafari.com/0/23/a9Zw4F.jpg')`,
 		  }}>
- 			{!selectedConversation ? (
- 				<NoChatSelected />
- 			) : (
-			<>
+			{!selectedConversation ? (
+			  <NoChatSelected />
+			) : (
+			  <>
 				{/* Header */}
-				<div className=' bg-white px-4 py-2 mb-2 flex'>
-					<span className='text-gray-900 font-bold'>  {selectedConversation.fullName}</span>
-					<div className="ml-auto flex *:mx-3">
-						<Phone/>
-						<Video />
-						<EllipsisVertical />
-					</div>
-
+				<div className="bg-white px-4 py-2 mb-2 flex items-center">
+				  <span className="text-gray-900 font-bold">{selectedConversation.fullName}</span>
+				  <div className="ml-auto flex space-x-3">
+					<Phone />
+					<Video />
+					<EllipsisVertical />
+				  </div>
 				</div>
-
-				
-
+		  
 				<Messages />
 				<MessageInput />
-			</>
- 			)}
-		</div>
+			  </>
+			)}
+		  </div>
+		  
 	);
 };
 export default MessageContainer;
